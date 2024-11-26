@@ -1,17 +1,17 @@
 import streamlit as st
 import math, time
 
-st.title("Menghitung:blue[Volume Tabung] :rocket:")
+st.title("Menghitung volume tabung ")
 
-r = st.number_input("Masukan Jari-jari  (cm): ",0)
-t = st.number_input("Masukan Tinggi (cm): ",0)
+r = number = st.number_input('Masukkan Jari-Jari (cm):', 0)
+t = number = st.number_input('Masukkan Diameter(cm):', 0)
 
-if st.button("Hitung volume", type="primary"):
-  loading = st.progress(0)
-  for percent_complete in range(100):
-    time.sleep(0.01)
-    loading.progress(i+1)
-  
-  
-  v = math.pi*(r**2)*t
-  st.success(f'Volume tabung adalah {v:.2f}')
+if st.button("Hitung volume", type='primary'):
+    loading = st.progress(0)
+    for i in range(100):
+        time.sleep(0.01)
+        loading.progress(i+1)
+   
+   
+    v = math.pi*(r**2)*t
+    st.success(f'Volume tabung adalah {v:2f}')
